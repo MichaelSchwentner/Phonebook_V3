@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/detail_phonebook_image"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="40dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/detail_name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_phonebook_image"
+            tools:text="Michael" />
+
+        <TextView
+            android:id="@+id/detail_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="#858585"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/detail_name_text"
+            app:layout_constraintStart_toStartOf="@+id/detail_name_text"
+            app:layout_constraintTop_toBottomOf="@+id/detail_name_text"
+            tools:text="+49 177 355 778 23" />
+
+        <ImageView
+            android:id="@+id/detail_callbutton_image"
+            android:layout_width="60dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="@+id/detail_number_text"
+            app:layout_constraintStart_toStartOf="@+id/detail_number_text"
+            app:layout_constraintTop_toBottomOf="@+id/detail_number_text"
+            app:srcCompat="@drawable/clipart409003" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#4C78A1"
+            android:text="edit"
+            app:layout_constraintEnd_toEndOf="@+id/detail_phonebook_image"
+            app:layout_constraintStart_toStartOf="@+id/detail_phonebook_image"
+            app:layout_constraintTop_toBottomOf="@+id/detail_callbutton_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
