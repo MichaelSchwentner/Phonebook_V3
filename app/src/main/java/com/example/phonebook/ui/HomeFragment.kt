@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.phonebook.MainActivity
 import com.example.phonebook.adapter.PhonebookAdapter
 import com.example.phonebook.data.Datasource
 import com.example.phonebook.data.model.PhonebookItem
@@ -24,8 +25,8 @@ class HomeFragment : Fragment(){
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val datasource = Datasource()
-        phonebookList = datasource.getPhonebookList()
+        val main = activity as MainActivity
+        phonebookList = main.contacts
 
         val deletePhone = { position: PhonebookItem ->
             //phonebookList.remove(position)

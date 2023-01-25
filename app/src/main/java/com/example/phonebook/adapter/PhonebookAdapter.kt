@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.phonebook.R
 import com.example.phonebook.data.model.PhonebookItem
 import com.example.phonebook.ui.HomeFragmentDirections
+import com.example.phonebook.ui.DetailFragmentDirections
+import com.example.phonebook.ui.HomeFragmentDirections.Companion.actionHomeFragmentToDetailFragment
 
 // und die Liste an Jokes um sie für die RecyclerView vorzubereiten
 class PhonebookAdapter(
@@ -27,6 +29,8 @@ class PhonebookAdapter(
         val phonebookDelete = view.findViewById<ImageView>(R.id.phonebook_delete_view)
 
         val phonebokkCard = view.findViewById<CardView>(R.id.phonebook_card)
+
+        val editButton = view.findViewById<Button>(R.id.edit_button)
 
         val homeButton = view.findViewById<Button>(R.id.home_add_button)
 
@@ -57,6 +61,7 @@ class PhonebookAdapter(
                     phonebookItem.number
                 ))
         }
+
         
         holder.phonebookDelete.setOnClickListener {
             deletePhone(phonebookItem)
